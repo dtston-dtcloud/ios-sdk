@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4625DCA92009A3C300AF9BAA /* DTCloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4625DCA72009A3C300AF9BAA /* DTCloudKit.framework */; };
+		4625DCAA2009A3C300AF9BAA /* MQTTFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4625DCA82009A3C300AF9BAA /* MQTTFramework.framework */; };
 		467EA1261E00E8DA005A0079 /* DeviceCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467EA1251E00E8DA005A0079 /* DeviceCommandViewController.m */; };
 		468485171F0B2F6700F76CFF /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 468485101F0B2F6700F76CFF /* SVIndefiniteAnimatedView.m */; };
 		468485181F0B2F6700F76CFF /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 468485121F0B2F6700F76CFF /* SVProgressHUD.bundle */; };
@@ -50,8 +52,6 @@
 		46B58A5E1DFE313B0051CDD7 /* ScanfQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B58A5C1DFE313B0051CDD7 /* ScanfQRCodeViewController.m */; };
 		46C225F81E04FF750011921A /* DeviceSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C225F71E04FF750011921A /* DeviceSearchViewController.m */; };
 		46C51A361E03CCB300C2885D /* DeviceLinkWiFiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C51A351E03CCB300C2885D /* DeviceLinkWiFiViewController.m */; };
-		46E656D81F176B6500E3935E /* DTCloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E656D61F176B6500E3935E /* DTCloudKit.framework */; };
-		46E656D91F176B6500E3935E /* MQTTFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E656D71F176B6500E3935E /* MQTTFramework.framework */; };
 		46EC17231DEC01F800ACE5A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EC17221DEC01F800ACE5A5 /* main.m */; };
 		46EC17261DEC01F800ACE5A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EC17251DEC01F800ACE5A5 /* AppDelegate.m */; };
 		46EC172C1DEC01F800ACE5A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46EC172A1DEC01F800ACE5A5 /* Main.storyboard */; };
@@ -87,6 +87,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4625DCA72009A3C300AF9BAA /* DTCloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTCloudKit.framework; sourceTree = "<group>"; };
+		4625DCA82009A3C300AF9BAA /* MQTTFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MQTTFramework.framework; sourceTree = "<group>"; };
 		467EA1241E00E8DA005A0079 /* DeviceCommandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceCommandViewController.h; sourceTree = "<group>"; };
 		467EA1251E00E8DA005A0079 /* DeviceCommandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceCommandViewController.m; sourceTree = "<group>"; };
 		4684850F1F0B2F6700F76CFF /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
@@ -171,8 +173,6 @@
 		46C225F71E04FF750011921A /* DeviceSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceSearchViewController.m; sourceTree = "<group>"; };
 		46C51A341E03CCB300C2885D /* DeviceLinkWiFiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceLinkWiFiViewController.h; sourceTree = "<group>"; };
 		46C51A351E03CCB300C2885D /* DeviceLinkWiFiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceLinkWiFiViewController.m; sourceTree = "<group>"; };
-		46E656D61F176B6500E3935E /* DTCloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTCloudKit.framework; sourceTree = "<group>"; };
-		46E656D71F176B6500E3935E /* MQTTFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MQTTFramework.framework; sourceTree = "<group>"; };
 		46EC171E1DEC01F800ACE5A5 /* SZNDTCloundKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SZNDTCloundKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46EC17221DEC01F800ACE5A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		46EC17241DEC01F800ACE5A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -210,8 +210,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EC175D1DEC02B000ACE5A5 /* libz.1.2.5.tbd in Frameworks */,
-				46E656D91F176B6500E3935E /* MQTTFramework.framework in Frameworks */,
-				46E656D81F176B6500E3935E /* DTCloudKit.framework in Frameworks */,
+				4625DCAA2009A3C300AF9BAA /* MQTTFramework.framework in Frameworks */,
+				4625DCA92009A3C300AF9BAA /* DTCloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +232,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4625DCA62009A3C300AF9BAA /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				4625DCA72009A3C300AF9BAA /* DTCloudKit.framework */,
+				4625DCA82009A3C300AF9BAA /* MQTTFramework.framework */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
 		4684850E1F0B2F6700F76CFF /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,15 +263,6 @@
 				4684851D1F0B338300F76CFF /* AlertViewManager.m */,
 			);
 			path = AlertViewManager;
-			sourceTree = "<group>";
-		};
-		46B176121DED1E1100E10BD7 /* SZNSDK */ = {
-			isa = PBXGroup;
-			children = (
-				46E656D61F176B6500E3935E /* DTCloudKit.framework */,
-				46E656D71F176B6500E3935E /* MQTTFramework.framework */,
-			);
-			path = SZNSDK;
 			sourceTree = "<group>";
 		};
 		46B176181DED204500E10BD7 /* KTActionSheet */ = {
@@ -424,6 +424,7 @@
 		46EC17151DEC01F800ACE5A5 = {
 			isa = PBXGroup;
 			children = (
+				4625DCA62009A3C300AF9BAA /* SDK */,
 				46EC17541DEC02A200ACE5A5 /* Project */,
 				46EC17201DEC01F800ACE5A5 /* SZNDTCloundKitDemo */,
 				46EC173A1DEC01F800ACE5A5 /* SZNDTCloundKitDemoTests */,
@@ -548,7 +549,6 @@
 				46B1766C1DED4BD300E10BD7 /* keybord */,
 				46B176261DED281500E10BD7 /* MJRefresh */,
 				46B176181DED204500E10BD7 /* KTActionSheet */,
-				46B176121DED1E1100E10BD7 /* SZNSDK */,
 			);
 			path = ThirdLibrary;
 			sourceTree = "<group>";
@@ -628,7 +628,6 @@
 				TargetAttributes = {
 					46EC171D1DEC01F800ACE5A5 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 2JSRUKKTRM;
 						ProvisioningStyle = Automatic;
 					};
 					46EC17361DEC01F800ACE5A5 = {
@@ -896,21 +895,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ShenZhen DTSTON CO.,LTD. (2JSRUKKTRM)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Project/ThirdLibrary",
-					"$(PROJECT_DIR)/Project/ThirdLibrary/SZNSDK",
+					"$(PROJECT_DIR)/SDK",
 				);
 				INFOPLIST_FILE = SZNDTCloundKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DTSTON.DTCloudKitDemoThird;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DTSTON.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -922,20 +921,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ShenZhen DTSTON CO.,LTD. (2JSRUKKTRM)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Project/ThirdLibrary",
-					"$(PROJECT_DIR)/Project/ThirdLibrary/SZNSDK",
+					"$(PROJECT_DIR)/SDK",
 				);
 				INFOPLIST_FILE = SZNDTCloundKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DTSTON.DTCloudKitDemoThird;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DTSTON.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
