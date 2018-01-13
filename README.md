@@ -7,7 +7,7 @@
 SDK封装了手机和设备之间包括配置入网、发现、连接、控制、心跳、状态上报、报警通知等过程。以及设备和云端直接的通讯等服务
 
 #### 实现逻辑
-![Alt text](./图层-01.png)
+![Alt text](./image/图层-01.png)
 
 ## SDK Demo
 
@@ -24,13 +24,13 @@ SDK封装了手机和设备之间包括配置入网、发现、连接、控制�
  
 （2）在工程内导入以下框架，并在build Settings做以下设置。
 
-![Alt text](./86FCC4B5-EC61-45EF-8F69-9BD1544805C7.png)
+![Alt text](./image/86FCC4B5-EC61-45EF-8F69-9BD1544805C7.png)
 
 
-![Alt text](./1EE6C8EB-A7B3-4100-BDF0-9C07842785ED.png)
+![Alt text](./image/1EE6C8EB-A7B3-4100-BDF0-9C07842785ED.png)
 
 
-![Alt text](./AC56A969-2D0B-4FD5-9A00-1F47933F57E9.png)
+![Alt text](./image/AC56A969-2D0B-4FD5-9A00-1F47933F57E9.png)
 
 
 ### 3. DTCloud 使用 (DTCloudManager类)
