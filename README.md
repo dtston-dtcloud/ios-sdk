@@ -9,20 +9,14 @@ SDK封装了手机和设备之间包括配置入网、发现、连接、控制�
 #### 实现逻辑
 ![Alt text](./image/图层-01.png)
 
-## SDK Demo
-
-点击下载[SDK Demo](http://assist.dtston.com/sdk/ios/SZNDTCloundKitDemo_V1_0.zip)
-
 ## SDK 集成
 ### 1. 申请AppID 和 AppKey
 
-登录应用[申请网站](http://www.DTSTON.com)，填写应用信息并提交审核，审核通过后，获取到AppId 和 AppKey。
+登录应用[申请网站](http://manage.dtston.com/#/login)，填写应用信息并提交审核，审核通过后，获取到AppId 和 AppKey。
 
 ### 2. 准备环境（请使用真机进行调试）
 
-（1）点击下载 [DTCloud](http://assist.dtston.com/sdk/ios/SZN_iOS_SDK_V1.0.zip)包，并将 [DTCloudKit.framework](http://assist.dtston.com/sdk/ios/SZN_iOS_SDK_V1.0.zip) 导入工程。
- 
-（2）在工程内导入以下框架，并在build Settings做以下设置。
+（1）在工程内导入以下框架，并在build Settings做以下设置。
 
 ![Alt text](./image/86FCC4B5-EC61-45EF-8F69-9BD1544805C7.png)
 
