@@ -1,0 +1,6 @@
+framework module DTCloudKit {
+  umbrella header "DTCloudKit.h"
+
+  export *
+  module * { export * }
+}
