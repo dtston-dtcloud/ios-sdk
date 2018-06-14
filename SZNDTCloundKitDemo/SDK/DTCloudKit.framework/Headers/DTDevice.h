@@ -17,6 +17,7 @@ typedef NS_ENUM(NSInteger,DeviceKindType)
     DeviceUsedByBlue        =2,     //蓝牙设备
     DeviceUsedByGPRS_MQTT   =3,     //GPRS设备(MQTT服务器）
     DeviceUsedByGPRS_TCP    =4,     //GPRS设备(TCP服务器)
+    DeviceUsedByAPPLY  =5,     //申请绑定设备（申要管理员同意）
 };
 
 @interface DTDevice : NSObject

@@ -24,14 +24,18 @@
     [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent];
     
     /*
-     *  使用DTCloudKit 要到官网去申请账号生成对应的产品，并把产品的AppId和AppKey用于初始化
+     *  使用DTCloudKit 要到官网去申请账号生成对应的应用，并把应用的AppId和AppKey用于初始化
      */
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     
-    [[DTCloudManager defaultJNI_iOS_SDK]setSanBox:YES];
+    [[DTCloudManager defaultJNI_iOS_SDK]setSanBox:NO];
     [[DTCloudManager defaultJNI_iOS_SDK]setOperationDelegate:self];
-    [[DTCloudManager defaultJNI_iOS_SDK]startAppId:DTCloudKitAppId appKey:DTCloudKitAppKey successCallback:nil errorCallback:nil];
+    [[DTCloudManager defaultJNI_iOS_SDK]startAppId:DTCloudKitAppId appKey:DTCloudKitAppKey successCallback:^(NSDictionary *dic) {
+        
+    } errorCallback:^(NSDictionary *dic) {
+        
+    }];
     
     return YES;
 }
