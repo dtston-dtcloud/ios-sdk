@@ -12,10 +12,10 @@
  如果在SDK找不到要用的接口通过
  -(void)dtStartRequestUrl:(NSString*)requestUrl requestArgument:(NSDictionary *)param successCallback:(void (^)(NSDictionary *dic))successCallback errorCallback:(void (^)(NSDictionary *dic))errorCallback;进行开发，业务层自行封装。
  
- 
+ DTXXX系列解释。第一个X-0为固定服务器，1为可变服务器，第二个X-0为不支持AP配网，1为支持AP配网，第三个X-0为短链接发送，1为长链接发送。
   其它配网，固件升级及发送合令都走DTCloundManger里面的接口，其中产品id为开发平台上创建的对应这个应用下创建的。
- 发命令分为短连接和长连接发送，确认固件是否支持长连接发送。
- 配网分为根据固件分为三种（一种固件固定服务器配网，一种AP热点配网，一种固件服务器根据sdk服务器配网）。
+ 发命令分为短连接和长连接发送，确认固件是否支持长连接发送。请确认固件类型
+ 配网分为根据固件分为三种（一种固件固定服务器配网，一种AP热点配网，一种固件服务器根据SDK设置的服务器配网）对应三种配网方法，请确认固件类型。
  */
 #import <Foundation/Foundation.h>
 #import "DTDevice.h"
@@ -61,11 +61,11 @@ typedef NS_ENUM(NSInteger,DTSDKProtocolType)
  - ServerDomainType: 服务器区域
  */
 typedef NS_ENUM(NSInteger, ServerDomainType) { // 服务器域名类型
-    ServerDomainTypeTest=0,            // 阿里云测式
-    ServerDomainTypeNormal=1,          // 阿里云正式
-    ServerDomainTypeAWS=2,             // 亚马逊美州
-    ServerDomainTypeEurope=3,          // 亚马逊欧洲
-    ServerDomainTypeNone=4,            // 不设置服务器
+    ServerDomainTypeTest=-1,            // 阿里云测式
+    ServerDomainTypeNormal=0,          // 阿里云正式
+    ServerDomainTypeAWS=1,             // 亚马逊美州
+    ServerDomainTypeEurope=2,          // 亚马逊欧洲
+    ServerDomainTypeNone=3,            // 不设置服务器
 };
 
 
@@ -207,6 +207,18 @@ typedef NS_ENUM(NSInteger, ServerDomainType) { // 服务器域名类型
 - (void)logout;
 
 #pragma mark - DTCloud云平台用户模块
+
+
+/**
+ 获取DTCloud云平台的验证码
+ 
+ @param username 注册的用户名(目前限定：手机号码)
+ @param type 1注册，2重置密码，3绑定手机
+ @param zone 地区号。86，886
+ @param successCallback 成功回调
+ @param errorCallback 失败回调
+ */
+- (void)getCodeWithUsername:(NSString *)username type:(NSString *)type zone:(NSString *)zone  successCallback:(void (^)(NSDictionary *dic)) successCallback errorCallback:(void (^)(NSDictionary *dic)) errorCallback;
 
 /**
  获取DTCloud云平台注册验证码
@@ -430,7 +442,7 @@ typedef NS_ENUM(NSInteger, ServerDomainType) { // 服务器域名类型
 - (void)startDeviceMatchingNetwork:(LinkType)modleType deviceProductId:(NSString *)productId deviceName:(NSString *)deviceName wifiSSID:(NSString *)wifiSSID wifiPassword:(NSString *)wifiPassword successCallback:(void (^)(NSDictionary *dic)) successCallback errorCallback:(void (^)(NSDictionary *dic)) errorCallback;
 /**
  开始AP联网配对(不会自动绑定到云平台，设备绑定到云平台，调用：bindDeviceByName:macAddress:productId:deviceType:successCallback:errorCallback:)
- 
+ 要先连接设备的热点wifi才能进行配网
  @param modleType wifi模块类型
  @param productId 产品类型
  @param deviceName 设备名字
