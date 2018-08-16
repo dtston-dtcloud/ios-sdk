@@ -8,7 +8,7 @@
 /*
  关于公有云开发，所有接口都必须用SDK的接口。other link 设置-ObjC
  第一步初设置服务器地址setServerType及回调代理（正式服务器地址地址可以通过getServerDominTypeByCountryCode：接口获取）
- 第二步 初始化设置appid和appkey，对应开发平台的应用id和key,
+ 第二步 初始化设置appid和appkey，对应开发平台的应用id和key, http://manage.dtston.com/#/login
  如果在SDK找不到要用的接口通过
  -(void)dtStartRequestUrl:(NSString*)requestUrl requestArgument:(NSDictionary *)param successCallback:(void (^)(NSDictionary *dic))successCallback errorCallback:(void (^)(NSDictionary *dic))errorCallback;进行开发，业务层自行封装。
  
@@ -16,6 +16,7 @@
   其它配网，固件升级及发送合令都走DTCloundManger里面的接口，其中产品id为开发平台上创建的对应这个应用下创建的。
  发命令分为短连接和长连接发送，确认固件是否支持长连接发送。请确认固件类型
  配网分为根据固件分为三种（一种固件固定服务器配网，一种AP热点配网，一种固件服务器根据SDK设置的服务器配网）对应三种配网方法，请确认固件类型。
+ 每六步退出登录logout
  */
 #import <Foundation/Foundation.h>
 #import "DTDevice.h"
@@ -34,6 +35,7 @@ typedef NS_ENUM(NSInteger,LinkType)
     EasyLinkMan_AWS =7,     //庆科AWS
     BoXinBK7231     =8,     //博芯BK7231
     Realtek8711     =9,     //Realtek 8711
+    HFLinkManV8      =10,
 };
 
 
@@ -80,6 +82,13 @@ typedef NS_ENUM(NSInteger, ServerDomainType) { // 服务器域名类型
  *  @param macAddress  设备的标识
  */
 - (void)dtCloudManagerMessageReceiveBackCode:(NSString *)backCode backContent:(NSString *)backContent macAddress:(NSString *)macAddress from:(int)from;
+/**
+ *  DTCloud收到第三方信息的命令
+ *
+ *  @param message    返回状态码
+
+ */
+- (void)dtCloudManagerMessageReceiveMessage:(NSDictionary *)message ;
 
 /**
  *  发送到DTCloud命令失败
@@ -176,10 +185,10 @@ typedef NS_ENUM(NSInteger, ServerDomainType) { // 服务器域名类型
  @param successCallback 成功回调
  @param errorCallback 失败回调
  */
--(void)dtStartRequestUrl:(NSString*)requestUrl requestArgument:(NSDictionary *)param successCallback:(void (^)(NSDictionary *dic))successCallback errorCallback:(void (^)(NSDictionary *dic))errorCallback;
+-(void)dtStartRequestUrl:(NSString *)requestUrl requestArgument:(NSDictionary*)param isLogin:(BOOL)islogin successCallback:(void (^)(NSDictionary *))successCallback errorCallback:(void (^)(NSDictionary *))errorCallback;
 
 
-
+-(NSString*) getAES256Encryp:(NSString *)Encrypstr;
 /**
  登录DTCloud云平台（需登录，才能获取对应用户的设备信息）
 
@@ -304,6 +313,13 @@ typedef NS_ENUM(NSInteger, ServerDomainType) { // 服务器域名类型
  @param errorCallback 失败回调
  */
 - (void)setUserPortraits:(NSData*)image SuccessCallback:(void(^)(NSDictionary *dic))successCallback errorCallback:(void(^)(NSDictionary *dic))errorCallback;
+/**
+ 设置用户头像
+ @param  image 头像数据
+ @param successCallback 成功回调
+ @param errorCallback 失败回调
+ */
+- (void)setUserPortraits:(NSData*)image urlRequest:(NSString *)url SuccessCallback:(void(^)(NSDictionary *dic))successCallback errorCallback:(void(^)(NSDictionary *dic))errorCallback;
 #pragma mark - DT云平台设备模块
 
 /**
@@ -550,6 +566,14 @@ typedef NS_ENUM(NSInteger, ServerDomainType) { // 服务器域名类型
  @param status 设备状态
  */
 - (void)addDeviceInServerForMonitor:(NSString *)macAddress andOnlineStatus:(BOOL)status;
+/**
+ 移除本地监听设备
+ 
+ @param macAddress 设备mac地址
+
+ */
+
+- (void)removeDeviceInServerForMonitor:(NSString *)macAddress ;
 
 /**
  根据国家区号获取服务器信息（+86）
